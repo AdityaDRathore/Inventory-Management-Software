@@ -24,7 +24,7 @@ The database is designed to handle inventory management, sales, purchases, custo
 **Relationships**:
 - One-to-Many with `Products`.
 - One-to-Many with `Sales` and `Purchases`.
-
+npx create-nx-workspace@latest my-project
 ---
 
 ### **2. Products**
