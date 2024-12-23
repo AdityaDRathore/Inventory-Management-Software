@@ -26,16 +26,17 @@
 ## **Next Steps**
 
 ### 3. Frontend Configuration (Day 4)
-- [ ] **Initialize Frontend Project**
-  - Create a new React project in the `frontend` folder.
-  - Install necessary dependencies and set up ESLint, Prettier, and Husky.
+- [x] **Initialize Frontend Project**
+  - Created a new React project in the `frontend` folder.
+  - Installed necessary dependencies.
+  - Set up ESLint, Prettier, and Husky.
 
 ### 4. Database Configuration (Day 5)
-- [ ] **Design Database Schema**
-  - Design the database schema based on the `DB Design.md` document.
-- [ ] **Set Up Database**
-  - Implement the database schema using an ORM like Prisma or Sequelize.
-  - Set up PostgreSQL locally and test connections.
+- [x] **Design Database Schema**
+  - Designed the database schema based on the `DB Design.md` document.
+- [x] **Set Up Database**
+  - Implemented the database schema using Prisma.
+  - Set up PostgreSQL locally and tested connections.
 
 ### 5. Backend API Development (Day 6 - Day 7)
 - [ ] **Authentication Module**

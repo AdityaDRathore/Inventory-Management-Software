@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "prisma-migrate",
+			"command": "npx",
+			"args": [
+				"prisma",
+				"migrate",
+				"dev",
+				"--name",
+				"init"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/apps/backend"
+			},
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}

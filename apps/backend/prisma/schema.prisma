@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id    String   @id @default(uuid())
+  name       String
+  email      String   @unique
+  password   String
+  role       Role     @default(shopkeeper)
+  created_at DateTime @default(now())
+
+  // Relationships
+  products   Product[]
+  sales      Sale[]
+  purchases  Purchase[]
+  customers  Customer[]
+  wholesalers Wholesaler[]
+  reports    Report[]
+}
+
+model Product {
+  product_id     String   @id @default(uuid())
+  user_id        String
+  name           String
+  category       String?
+  stock_quantity Int      @default(0)
+  price_per_unit Float
+  wholesaler_id  String
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  // Relationships
+  user       User      @relation(fields: [user_id], references: [user_id])
+  wholesaler Wholesaler @relation(fields: [wholesaler_id], references: [wholesaler_id])
+  sales      Sale[]
+  purchases  Purchase[]
+}
+
+model Customer {
+  customer_id  String   @id @default(uuid())
+  user_id      String
+  name         String
+  phone_number String?  @unique
+  email        String?
+  address      String?
+  created_at   DateTime @default(now())
+
+  // Relationships
+  user  User  @relation(fields: [user_id], references: [user_id])
+  sales Sale[]
+}
+
+model Wholesaler {
+  wholesaler_id String   @id @default(uuid())
+  user_id       String
+  name          String
+  phone_number  String?  @unique
+  email         String?
+  address       String?
+  created_at    DateTime @default(now())
+
+  // Relationships
+  user      User      @relation(fields: [user_id], references: [user_id])
+  products  Product[]
+  purchases Purchase[]
+}
+
+model Sale {
+  sale_id     String   @id @default(uuid())
+  user_id     String
+  customer_id String
+  product_id  String
+  quantity    Int
+  total_price Float
+  sale_date   DateTime @default(now())
+
+  // Relationships
+  user     User     @relation(fields: [user_id], references: [user_id])
+  customer Customer @relation(fields: [customer_id], references: [customer_id])
+  product  Product  @relation(fields: [product_id], references: [product_id])
+}
+
+model Purchase {
+  purchase_id  String   @id @default(uuid())
+  user_id      String
+  wholesaler_id String
+  product_id   String
+  quantity     Int
+  total_price  Float
+  purchase_date DateTime @default(now())
+
+  // Relationships
+  user       User       @relation(fields: [user_id], references: [user_id])
+  wholesaler Wholesaler @relation(fields: [wholesaler_id], references: [wholesaler_id])
+  product    Product    @relation(fields: [product_id], references: [product_id])
+}
+
+model Report {
+  report_id    String   @id @default(uuid())
+  user_id      String
+  report_type  ReportType
+  generated_at DateTime @default(now())
+  file_url     String
+
+  // Relationships
+  user User @relation(fields: [user_id], references: [user_id])
+}
+
+enum Role {
+  admin
+  shopkeeper
+}
+
+enum ReportType {
+  sales
+  purchases
+}
