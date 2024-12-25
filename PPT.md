@@ -39,10 +39,12 @@
   - Set up PostgreSQL locally and tested connections.
 
 ### 5. Backend API Development (Day 6 - Day 7)
-- [ ] **Authentication Module**
-  - Implement user registration, login, and JWT-based authentication.
-- [ ] **Inventory Management APIs**
+- [x] **Authentication Module**
+  - Implemented user registration, login, and JWT-based authentication.
+- [x] **Inventory Management APIs**
   - CRUD operations for products.
+  - Added endpoints for creating, retrieving, updating, and deleting products.
+  - Added endpoint for creating wholesalers.
 
 ### 6. Frontend Development (Day 8 - Day 9)
 - [ ] **Set up React Project**
