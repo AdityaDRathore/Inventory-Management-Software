@@ -9,7 +9,15 @@ const router = express.Router();
 router.post('/products', authMiddleware, async (req, res) => {
     const { name, category, stock_quantity, price_per_unit, wholesaler_id } = req.body;
     const user_id = req.user.userId;
+    console.log('Request body:', req.body);
+    console.log('User ID:', user_id);
     try {
+        // Check if wholesaler_id exists
+        const wholesaler = await prisma.wholesaler.findUnique({ where: { wholesaler_id } });
+        if (!wholesaler) {
+            return res.status(400).json({ error: 'Invalid wholesaler_id' });
+        }
+
         const product = await prisma.product.create({
             data: {
                 name,
@@ -22,7 +30,8 @@ router.post('/products', authMiddleware, async (req, res) => {
         });
         res.status(201).json(product);
     } catch (error) {
-        res.status(400).json({ error: 'Error adding product' });
+        console.error('Error adding product:', error);
+        res.status(400).json({ error: 'Error adding product', details: error.message });
     }
 });
 
@@ -41,7 +50,15 @@ router.get('/products', authMiddleware, async (req, res) => {
 router.put('/products/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     const { name, category, stock_quantity, price_per_unit, wholesaler_id } = req.body;
+    console.log('Request body:', req.body);
+    console.log('Product ID:', id);
     try {
+        // Check if wholesaler_id exists
+        const wholesaler = await prisma.wholesaler.findUnique({ where: { wholesaler_id } });
+        if (!wholesaler) {
+            return res.status(400).json({ error: 'Invalid wholesaler_id' });
+        }
+
         const product = await prisma.product.update({
             where: { product_id: id },
             data: {
@@ -54,7 +71,8 @@ router.put('/products/:id', authMiddleware, async (req, res) => {
         });
         res.json(product);
     } catch (error) {
-        res.status(400).json({ error: 'Error updating product' });
+        console.error('Error updating product:', error);
+        res.status(400).json({ error: 'Error updating product', details: error.message });
     }
 });
 

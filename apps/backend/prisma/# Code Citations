@@ -1,0 +1,69 @@
+# Code Citations
+
+## License: MIT
+https://github.com/anmud/learntocode/tree/7a7fcd3f4922f3029c74fba1596d20f9181f7c06/udacity-front-end-developer-programm/build-tools-%26-single-page-web-apps/1_basic-of-webpack/001_basic-of-webpack.md
+
+```
+",
+     "version": "1.0.0",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "
+```
+
+
+## License: unknown
+https://github.com/Abdul-Sayed/react-notes-awsayed/tree/ac3347596e218f684e60450f0cf4825bd73ec4d5/MERN.md
+
+```
+"index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "nodemon index.js"
+     },
+     "keywords": [],
+     "author":
+```
+
+
+## License: unknown
+https://github.com/Samyak-Goyal/Training-Innovaccer/tree/00f3ace7a0e1b3f18bd85ed06d7a5ab389990669/Notes/BuildAndDeploy.yml
+
+```
+: "1.0.0",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "nodemon index.js"
+```
+
+
+## License: unknown
+https://github.com/apachecn/coinmonk-blog-zh-202201to06/tree/9e8dfa754520ce1f9c296dc72933d40a5b57aa4d/docs/erc-1155-nft-smart-contract-deployment-using-hardhat-7425fca60334.md
+
+```
+{
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "nodemon index.js"
+     },
+     "keywords": [],
+     "author": "",
+     "license": "ISC"
+```
+
+
+## License: unknown
+https://github.com/anabastos/node4noobs/tree/d14d5bbe20142029e91abcd7e11e9dd911ccf792/contents/2-arquitetura-basica/express.md
+
+```
+/index.js
+   const express = require('express');
+   const app = express();
+   const port = 3000;
+
+   app.get('/', (req, res) => {
+     res.send('Hello World!');
+   })
+```
+
