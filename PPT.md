@@ -48,9 +48,17 @@
 
 ### 6. Frontend Development (Day 8 - Day 9)
 - [ ] **Set up React Project**
-  - Create the initial React project structure.
+  - Created the initial React project structure.
 - [ ] **Develop UI Components**
   - Create reusable components for managing inventory, sales, and purchases.
+
+### 7. Testing and Deployment (Ongoing)
+- [ ] **Write Unit Tests**
+  - Write unit tests for backend and frontend components.
+- [ ] **Write Integration Tests**
+  - Write integration tests for backend and frontend components.
+- [ ] **Deploy Application**
+  - Deploy the application to a production environment.
 
 ---
 
