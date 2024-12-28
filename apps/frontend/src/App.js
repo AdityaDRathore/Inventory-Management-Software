@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Inventory from "./pages/Inventory";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" exact component={Dashboard} />
           <Route path="/inventory" component={Inventory} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
         </Switch>
       </Router>
     </ChakraProvider>
