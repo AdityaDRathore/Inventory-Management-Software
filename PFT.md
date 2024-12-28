@@ -25,8 +25,8 @@ This document tracks the features added to the project over time to ensure clari
 - [x] **Set Up Database**: Implement the database schema using Prisma and set up PostgreSQL locally.
 
 ## **Backend API Development**
-- [ ] **Authentication Module**: Implement user registration, login, and JWT-based authentication.
-- [ ] **Inventory Management APIs**: CRUD operations for products.
+- [x] **Authentication Module**: Implement user registration, login, and JWT-based authentication.
+- [x] **Inventory Management APIs**: CRUD operations for products.
 
 ## **Frontend Development**
 - [ ] **Set up React Project**: Create the initial React project structure.

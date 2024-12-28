@@ -8,23 +8,23 @@ This task list provides a comprehensive breakdown of all required steps to compl
 ## **Phase 1: Initial Progress Showcase**
 
 ### 1. Project Setup (Day 1 - Day 2)
-- [ ] **Set up Monorepo**
+- [x] **Set up Monorepo**
   - Initialize the monorepo using tools like `Nx` or `Turborepo`.
   - Create folders for `backend` and `frontend` projects.
-- [ ] **Define Tech Stack**
+- [x] **Define Tech Stack**
   - Finalize stack: Node.js, Express.js, React (web), PostgreSQL.
   - Install dependencies and set up ESLint, Prettier, and Husky.
 
 ### 2. Database Configuration (Day 3)
-- [ ] **Create Database**
+- [x] **Create Database**
   - Implement database schema for initial features: Users, Products, and Sales.
   - Use tools like `Prisma` or `Sequelize` for ORM.
   - Set up PostgreSQL locally and test connections.
 
 ### 3. Backend API Development (Day 4 - Day 5)
-- [ ] **Authentication Module**
+- [x] **Authentication Module**
   - Implement user registration, login, and JWT-based authentication.
-- [ ] **Inventory Management APIs**
+- [x] **Inventory Management APIs**
   - CRUD operations for products.
 
 ### 4. Frontend Development (Day 6 - Day 7)
