@@ -1,5 +1,4 @@
 import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-import PropTypes from 'prop-types';
 
 const CustomTable = ({ columns, data }) => (
   <Table variant="simple">
@@ -11,8 +10,8 @@ const CustomTable = ({ columns, data }) => (
       </Tr>
     </Thead>
     <Tbody>
-      {data.map((row) => (
-        <Tr key={row.id}>
+      {data.map((row, index) => (
+        <Tr key={index}>
           {columns.map((col) => (
             <Td key={col}>{row[col]}</Td>
           ))}
@@ -21,9 +20,5 @@ const CustomTable = ({ columns, data }) => (
     </Tbody>
   </Table>
 );
-CustomTable.propTypes = {
-  columns: PropTypes.arrayOf(PropTypes.string).isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
 
 export default CustomTable;

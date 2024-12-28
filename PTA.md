@@ -91,3 +91,7 @@ This task list provides a comprehensive breakdown of all required steps to compl
 
 This updated timeline prioritizes completing 2-3 key pages and their backend logic for the client demonstration. Adjust based on progress and feedback.
 ```
+Next Steps
+Create the Login/Registration page and connect it to the backend authentication API.
+Design the Dashboard page with dummy data.
+Implement the Inventory Management page with product list, add product form, and search/filter options.
