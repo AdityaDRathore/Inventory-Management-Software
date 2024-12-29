@@ -1,4 +1,5 @@
-import { useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from "@chakra-ui/react";
+import PropTypes from 'prop-types';
 
 const CustomModal = ({ isOpen, onClose, title, children }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
@@ -13,5 +14,11 @@ const CustomModal = ({ isOpen, onClose, title, children }) => (
     </ModalContent>
   </Modal>
 );
+CustomModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default CustomModal;

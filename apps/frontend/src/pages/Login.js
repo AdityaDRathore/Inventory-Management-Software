@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Box, Button, Input, FormControl, FormLabel, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import FormInput from "../components/Form";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,14 +27,8 @@ const Login = () => {
     <Box maxW="sm" mx="auto" mt={10}>
       <Heading mb={6}>Login</Heading>
       {error && <Text color="red.500" mb={4}>{error}</Text>}
-      <FormControl mb={4}>
-        <FormLabel>Email</FormLabel>
-        <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </FormControl>
-      <FormControl mb={4}>
-        <FormLabel>Password</FormLabel>
-        <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </FormControl>
+      <FormInput label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <FormInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <Button colorScheme="teal" onClick={handleLogin}>Login</Button>
     </Box>
   );

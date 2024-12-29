@@ -18,6 +18,21 @@
 			"presentation": {
 				"reveal": "silent"
 			}
+		},
+		{
+			"type": "shell",
+			"label": "install-chakra-ui",
+			"command": "npm",
+			"args": [
+				"i",
+				"@chakra-ui/form-control"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/apps/frontend"
+			},
+			"presentation": {
+				"reveal": "silent"
+			}
 		}
 	]
 }
