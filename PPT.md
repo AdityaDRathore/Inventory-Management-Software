@@ -47,10 +47,27 @@
   - Added endpoint for creating wholesalers.
 
 ### 6. Frontend Development (Day 8 - Day 9)
-- [ ] **Set up React Project**
+- [x] **Frontend Setup**
   - Created the initial React project structure.
-- [ ] **Develop UI Components**
-  - Create reusable components for managing inventory, sales, and purchases.
+  - Installed necessary dependencies including `@chakra-ui/react`, `axios`, and `react-router-dom`.
+  - Set up routing with `React Router`.
+
+- [x] **Reusable UI Components**
+  - Developed reusable components including `Navbar`, `Table`, `FormInput`, `Modal`, and `Card`.
+
+- [] **Login/Registration Page**
+  - Implemented the login and registration forms.
+  - Connected the forms to the backend authentication API.
+  - Handled authentication state and error messages.
+
+- [] **Dashboard Page**
+  - Designed the dashboard layout with dummy data.
+  - Created card components to display key metrics.
+
+- [] **Inventory Management Page**
+  - Implemented the product list table with options to edit/delete.
+  - Added a form to add new products.
+  - Included search and filter options.
 
 ### 7. Testing and Deployment (Ongoing)
 - [ ] **Write Unit Tests**
