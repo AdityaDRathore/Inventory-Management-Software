@@ -14,10 +14,17 @@
           "targetName": "typecheck"
         },
         "build": {
-          "targetName": "build",
-          "configName": "tsconfig.lib.json"
+          "targetName": "build"
+        },
+        "serve": {
+          "targetName": "serve"
         }
       }
     }
-  ]
+  ],
+  "targetDefaults": {
+    "serve": {
+      "dependsOn": ["^build"]
+    }
+  }
 }
