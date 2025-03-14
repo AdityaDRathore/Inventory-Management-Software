@@ -2,6 +2,7 @@
 
 ### **Project Title**: Inventory and Account Management System for Local Shopkeepers
 
+Author: Aditya Rathore 
 ---
 
 ### **Project Overview**
